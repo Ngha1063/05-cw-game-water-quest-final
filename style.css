@@ -1,15 +1,13 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   text-align: center;
   background: #f4f8fb;
   margin: 0;
   padding: 20px;
 }
 
-h1 {
-  margin-bottom: 10px;
-}
+h1 { margin-bottom: 10px; }
 
 .score-board {
   font-size: 1.3rem;
@@ -31,21 +29,13 @@ button {
   cursor: pointer;
   transition: 0.2s;
 }
-
-button:hover {
-  background-color: #2980b9;
-}
-
-button:active {
-  transform: scale(0.95);
-}
-
+button:hover { background-color: #2980b9; }
+button:active { transform: scale(0.95); }
 
 .game-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-
   max-width: 320px;
   margin: 0 auto;
 }
@@ -53,23 +43,15 @@ button:active {
 .grid-cell {
   background: #dcdcdc;
   aspect-ratio: 1 / 1;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
 }
-
-.grid-cell:hover {
-  background: #cfcfcf;
-}
-
-.grid-cell:active {
-  transform: scale(0.9);
-}
+.grid-cell:hover { background: #cfcfcf; }
+.grid-cell:active { transform: scale(0.9); }
 
 .water-can {
   width: 50%;
@@ -85,19 +67,10 @@ button:active {
   border-radius: 50%;
 }
 
-.correct {
-  background-color: #a8e6a3 !important;
-}
+.correct { background-color: #a8e6a3 !important; }
+.wrong { background-color: #f5a3a3 !important; }
 
-.wrong {
-  background-color: #f5a3a3 !important;
-}
-
-#message {
-  margin-top: 15px;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
+#message { margin-top: 15px; font-size: 1.4rem; font-weight: bold; }
 
 #confetti-canvas {
   position: fixed;
@@ -106,13 +79,18 @@ button:active {
   pointer-events: none;
 }
 
-@media (max-width: 500px) {
-  .game-grid {
-    max-width: 90vw;
-  }
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+footer a:hover { text-decoration: underline; }
 
-  button {
-    width: 80%;
-    max-width: 200px;
-  }
+@media (max-width: 500px) {
+  .game-grid { max-width: 90vw; }
+  button { width: 80%; max-width: 200px; }
 }
