@@ -1,0 +1,118 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f8fb;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.score-board {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 18px;
+  margin: 5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.grid-cell {
+  background: #dcdcdc;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.grid-cell:hover {
+  background: #cfcfcf;
+}
+
+.grid-cell:active {
+  transform: scale(0.9);
+}
+
+.water-can {
+  width: 50%;
+  height: 50%;
+  background: #3498db;
+  border-radius: 8px;
+}
+
+.obstacle {
+  width: 50%;
+  height: 50%;
+  background: #e74c3c;
+  border-radius: 50%;
+}
+
+.correct {
+  background-color: #a8e6a3 !important;
+}
+
+.wrong {
+  background-color: #f5a3a3 !important;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .game-grid {
+    max-width: 90vw;
+  }
+
+  button {
+    width: 80%;
+    max-width: 200px;
+  }
+}
